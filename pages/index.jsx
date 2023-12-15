@@ -2,12 +2,19 @@ import Socialicons from "@/components/Socialicons";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import fadeIn from "@/components/Variants";
 
 const Home = () => {
   return (
     <section className="padding-container max-container page flex flex-col gap-4 flexCenter lg:flex-row lg:gap-10 ">
       {/*left*/}
-      <div className=" flex-1 flexCenter flex-col lg:items-start">
+      <motion.div
+        variants={fadeIn("down", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className=" flex-1 flexCenter flex-col lg:items-start"
+      >
         <h2 className="h2 font-bold">
           Hi, I&apos;m
           <span className="text-secondary font-semibold">
@@ -28,10 +35,18 @@ const Home = () => {
           creativity &apos;&apos;
         </p>
         {/*social media links*/}
-        <Socialicons className="flexCenter" />
-      </div>
+        <div className="flex items-center justify-center">
+          <Socialicons />
+        </div>
+      </motion.div>
       {/*Right*/}
-      <div className="flex flex-l relative">
+      <motion.div
+        variants={fadeIn("up", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="flex flex-l relative"
+      >
         <Image
           src={"/hero1.png"}
           alt="heroImg"
@@ -46,7 +61,7 @@ const Home = () => {
             transition: { duration: 10, repeat: Infinity, ease: "easeInOut" },
           }}
         ></motion.span>
-      </div>
+      </motion.div>
     </section>
   );
 };

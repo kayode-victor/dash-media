@@ -2,12 +2,20 @@ import { aboutData } from "@/app/constant/data";
 import { useState } from "react";
 import CountUp from "react-countup";
 
+import { motion } from "framer-motion";
+import fadeIn from "@/components/Variants";
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
     <section className="padding-container max-container flex flex-col gap-8 py-4 lg:flex-row lg:py-20 xl:gap-32">
       {/*left*/}
-      <div className="flex flex-1 flex-col flexCenter text-center lg:text-start lg:justify-start">
+      <motion.div
+        variants={fadeIn("left", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="flex flex-1 flex-col flexCenter text-center lg:text-start lg:justify-start"
+      >
         <h2 className="h2">
           Photographer & <span className="text-secondary">Film</span>Maker
         </h2>
@@ -56,9 +64,15 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       {/*right*/}
-      <div className="flex flex-col  w-full xl:max-w-[47%] h-[488px]">
+      <motion.div
+        variants={fadeIn("right", 0.4)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="flex flex-col  w-full xl:max-w-[47%] h-[488px]"
+      >
         {/*Expertise*/}
         <div className="mb-2 lg:mb-10 flex flex-col gap-2 mx-auto min-w-[90%] xl:ml-0">
           <div>
@@ -125,7 +139,7 @@ const About = () => {
             <div>{item.year}</div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
