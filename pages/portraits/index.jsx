@@ -5,10 +5,11 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
+import "./styles.css";
+
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import Image from "next/image";
-import "./styles.css";
 
 const portraits = () => {
   return (
@@ -30,7 +31,16 @@ const portraits = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <Image src="/potrait1.jpg" height={300} width={300} alt="portrait" />
+          <Image src="/potrait1.jpg" height={300} width={300} alt="potrait" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src="/potrait1.jpg" height={300} width={300} alt="potrait" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src="/potrait1.jpg" height={300} width={300} alt="potrait" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src="/potrait1.jpg" height={300} width={300} alt="potrait" />
         </SwiperSlide>
       </Swiper>
     </>
