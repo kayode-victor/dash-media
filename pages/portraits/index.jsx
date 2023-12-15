@@ -30,16 +30,7 @@ const portraits = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <Image src="/potrait1.jpg" height={500} width={500} alt="portrait" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/potrait1.jpg" height={500} width={500} alt="portrait" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/potrait1.jpg" height={500} width={500} alt="portrait" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/potrait1.jpg" height={500} width={500} alt="portrait" />
+          <Image src="/potrait1.jpg" height={300} width={300} alt="portrait" />
         </SwiperSlide>
       </Swiper>
     </>
